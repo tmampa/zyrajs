@@ -2,13 +2,18 @@
   "name": "zyrajs",
   "version": "0.1.0",
   "description": "Zyra - A lightweight Node.js backend framework for building RESTful APIs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "engines": {
     "node": ">=18.0.0"
   },
   "scripts": {
-    "start": "node examples/basic-server.js",
-    "test": "node test/cors.test.js"
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "start": "node examples/basic-server.js"
   },
   "keywords": [
     "framework",
@@ -34,11 +39,16 @@
   },
   "homepage": "https://github.com/tmampa/zyrajs#readme",
   "files": [
-    "src/",
+    "dist/",
     "README.md",
     "LICENSE"
   ],
   "dependencies": {
     "path-to-regexp": "^6.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "rimraf": "^6.1.0",
+    "typescript": "^5.9.3"
   }
 }
