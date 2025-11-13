@@ -4,6 +4,9 @@
   "description": "Zyra - A lightweight Node.js backend framework for building RESTful APIs",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "bin": {
+    "create-zyra-app": "./bin/create-zyra-app.js"
+  },
   "engines": {
     "node": ">=18.0.0"
   },
@@ -40,6 +43,7 @@
   "homepage": "https://github.com/tmampa/zyrajs#readme",
   "files": [
     "dist/",
+    "bin/",
     "README.md",
     "LICENSE"
   ],
