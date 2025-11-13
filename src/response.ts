@@ -1,9 +1,15 @@
+import { ServerResponse } from "http";
+import { IResponse } from "./types/response";
+
 /**
  * Response wrapper class
  * Provides a convenient API for sending HTTP responses
  */
-class Response {
-  constructor(res) {
+export class Response implements IResponse {
+  private _res: ServerResponse;
+  public _sent: boolean;
+
+  constructor(res: ServerResponse) {
     this._res = res;
     this._sent = false;
   }
@@ -13,7 +19,7 @@ class Response {
    * @param {number} code - HTTP status code
    * @returns {Response} - Returns this for chaining
    */
-  status(code) {
+  status(code: number): IResponse {
     this._res.statusCode = code;
     return this;
   }
@@ -22,12 +28,12 @@ class Response {
    * Send a JSON response
    * @param {*} data - Data to serialize as JSON
    */
-  json(data) {
+  json(data: any): void {
     if (this._sent) {
       return;
     }
 
-    this.setHeader('Content-Type', 'application/json');
+    this.setHeader("Content-Type", "application/json");
     this._res.end(JSON.stringify(data));
     this._sent = true;
   }
@@ -36,12 +42,12 @@ class Response {
    * Send a text/HTML response
    * @param {string} data - Text or HTML content to send
    */
-  send(data) {
+  send(data: string): void {
     if (this._sent) {
       return;
     }
 
-    this.setHeader('Content-Type', 'text/html');
+    this.setHeader("Content-Type", "text/html");
     this._res.end(data);
     this._sent = true;
   }
@@ -49,10 +55,10 @@ class Response {
   /**
    * Set a response header
    * @param {string} key - Header name
-   * @param {string} value - Header value
+   * @param {string|number|string[]} value - Header value
    * @returns {Response} - Returns this for chaining
    */
-  setHeader(key, value) {
+  setHeader(key: string, value: string | number | string[]): IResponse {
     this._res.setHeader(key, value);
     return this;
   }
@@ -60,7 +66,7 @@ class Response {
   /**
    * End the response stream
    */
-  end() {
+  end(): void {
     if (this._sent) {
       return;
     }
@@ -69,5 +75,3 @@ class Response {
     this._sent = true;
   }
 }
-
-module.exports = Response;
