@@ -1,0 +1,25 @@
+{
+  "name": "@minimal/node-framework",
+  "version": "0.1.0",
+  "description": "A lightweight Node.js backend framework for building RESTful APIs",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node examples/basic-server.js"
+  },
+  "keywords": [
+    "framework",
+    "http",
+    "api",
+    "rest",
+    "backend",
+    "nodejs"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "path-to-regexp": "^6.2.1"
+  }
+}
