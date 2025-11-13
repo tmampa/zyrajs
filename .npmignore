@@ -1,24 +1,37 @@
-# Development files
-examples/
+# Kiro IDE
 .kiro/
 
-# Version control
+# Examples (users can see them on GitHub)
+examples/
+
+# Development files
 .git/
 .gitignore
-
-# IDE
 .vscode/
 .idea/
 
-# OS files
-.DS_Store
-Thumbs.db
+# Test files
+test/
+tests/
+*.test.js
+*.spec.js
+
+# Documentation source
+docs/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Environment
+.env
+.env.*
 
 # Logs
 *.log
 npm-debug.log*
 
-# Testing
-test/
-*.test.js
+# Coverage
 coverage/
+.nyc_output/

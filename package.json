@@ -1,7 +1,7 @@
 {
-  "name": "@minimal/node-framework",
+  "name": "zyra",
   "version": "0.1.0",
-  "description": "A lightweight Node.js backend framework for building RESTful APIs",
+  "description": "Zyra - A lightweight Node.js backend framework for building RESTful APIs",
   "main": "src/index.js",
   "engines": {
     "node": ">=18.0.0"
@@ -15,10 +15,28 @@
     "api",
     "rest",
     "backend",
-    "nodejs"
+    "nodejs",
+    "zyra",
+    "web-framework",
+    "express-alternative",
+    "routing",
+    "middleware"
   ],
   "author": "",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/zyra.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_USERNAME/zyra/issues"
+  },
+  "homepage": "https://github.com/YOUR_USERNAME/zyra#readme",
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
   "dependencies": {
     "path-to-regexp": "^6.2.1"
   }

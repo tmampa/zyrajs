@@ -27,7 +27,8 @@ app.use((req, res, next) => {
 // Simple GET route
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to the Node.js Backend Framework!',
+    message: 'Welcome to Zyra!',
+    description: 'A lightweight Node.js backend framework',
     endpoints: {
       users: '/users',
       posts: '/posts',
@@ -272,12 +273,12 @@ app.get('/chaining', (req, res) => {
   res
     .status(200)
     .setHeader('X-Custom-Header', 'CustomValue')
-    .setHeader('X-Powered-By', 'Node.js Framework')
+    .setHeader('X-Powered-By', 'Zyra')
     .json({
       message: 'This response demonstrates method chaining',
       headers: {
         'X-Custom-Header': 'CustomValue',
-        'X-Powered-By': 'Node.js Framework'
+        'X-Powered-By': 'Zyra'
       }
     });
 });
