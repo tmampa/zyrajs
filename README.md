@@ -14,6 +14,39 @@ A lightweight Node.js backend framework for building RESTful APIs with simplicit
 
 ## Installation
 
+### Quick Start with CLI (Recommended)
+
+The fastest way to get started is using the `create-zyra-app` CLI tool:
+
+```bash
+npx create-zyra-app my-app
+```
+
+This will:
+
+- ✅ Create a new project with your chosen template (JavaScript or TypeScript)
+- ✅ Set up the project structure (minimal or with examples)
+- ✅ Configure all necessary dependencies
+- ✅ Provide clear next steps to get you started
+
+#### CLI Options
+
+```bash
+# Create with interactive prompts
+npx create-zyra-app my-app
+
+# Specify template directly
+npx create-zyra-app my-app --template typescript
+npx create-zyra-app my-app --template javascript
+
+# Get help
+npx create-zyra-app --help
+```
+
+### Manual Installation
+
+You can also install Zyra manually in an existing project:
+
 ```bash
 npm install zyrajs
 ```

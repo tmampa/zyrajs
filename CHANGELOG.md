@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.3] - 2025-11-13
+
+### Added
+
+- Success reporter module for create-zyra-app CLI
+- Enhanced success messages with project details and location
+- Visual formatting with emojis for better user experience
+- Context-specific guidance for minimal vs example project structures
+- Clear next steps with actual project name substituted in commands
+
+### Improved
+
+- Modularized CLI success message display
+- Better separation of concerns in CLI architecture
+
 ## [0.2.2] - 2025-11-13
 
 ### Fixed
