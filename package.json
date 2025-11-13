@@ -1,5 +1,5 @@
 {
-  "name": "zyra",
+  "name": "zyrajs",
   "version": "0.1.0",
   "description": "Zyra - A lightweight Node.js backend framework for building RESTful APIs",
   "main": "src/index.js",
@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tmampa/zyra.git"
+    "url": "https://github.com/tmampa/zyrajs.git"
   },
   "bugs": {
-    "url": "https://github.com/tmampa/zyra/issues"
+    "url": "https://github.com/tmampa/zyrajs/issues"
   },
-  "homepage": "https://github.com/tmampa/zyra#readme",
+  "homepage": "https://github.com/tmampa/zyrajs#readme",
   "files": [
     "src/",
     "README.md",

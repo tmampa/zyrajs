@@ -14,26 +14,26 @@ A lightweight Node.js backend framework for building RESTful APIs with simplicit
 ## Installation
 
 ```bash
-npm install zyra
+npm install zyrajs
 ```
 
 Or with other package managers:
 
 ```bash
 # Using Yarn
-yarn add zyra
+yarn add zyrajs
 
 # Using pnpm
-pnpm add zyra
+pnpm add zyrajs
 
 # Using Bun
-bun add zyra
+bun add zyrajs
 ```
 
 ## Quick Start
 
 ```javascript
-const createApp = require("zyra");
+const createApp = require("zyrajs");
 
 const app = createApp();
 
