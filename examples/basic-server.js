@@ -1,4 +1,6 @@
-const createApp = require('../src/index');
+// When using zyrajs from npm: const createApp = require('zyrajs');
+// For this example, we use the local build:
+const createApp = require('../dist/index.js');
 
 // Create application instance
 const app = createApp();

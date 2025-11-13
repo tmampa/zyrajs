@@ -31,3 +31,14 @@ export { cors };
 
 // Set createApp as default export
 export default createApp;
+
+// CommonJS compatibility - allows require('zyrajs') to work directly
+// This ensures that both `require('zyrajs')` and `require('zyrajs').default` work
+module.exports = createApp;
+module.exports.default = createApp;
+module.exports.createApp = createApp;
+module.exports.cors = cors;
+module.exports.Request = require("./request").Request;
+module.exports.Response = require("./response").Response;
+module.exports.Router = require("./router").default;
+module.exports.App = require("./app").App;

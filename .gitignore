@@ -51,3 +51,6 @@ build/
 # Temporary files
 tmp/
 temp/
+
+test-js-project/
+example/
