@@ -26,12 +26,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YOUR_USERNAME/zyra.git"
+    "url": "https://github.com/tmampa/zyra.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_USERNAME/zyra/issues"
+    "url": "https://github.com/tmampa/zyra/issues"
   },
-  "homepage": "https://github.com/YOUR_USERNAME/zyra#readme",
+  "homepage": "https://github.com/tmampa/zyra#readme",
   "files": [
     "src/",
     "README.md",
