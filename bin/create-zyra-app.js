@@ -22,6 +22,7 @@ const {
 const { promptTemplate, promptStructure } = require('../dist/cli/prompt');
 const { selectTemplate } = require('../dist/cli/templates');
 const { ProjectGenerator } = require('../dist/cli/generator');
+const { displaySuccess } = require('../dist/cli/success-reporter');
 
 // Parse command-line arguments
 function parseArguments(args) {
@@ -78,37 +79,6 @@ Examples:
 
 For more information, visit: https://github.com/tmampa/zyrajs
 `);
-}
-
-/**
- * Display success message with next steps
- */
-function displaySuccess(projectName, templateType, structure) {
-  console.log('\n✅ Success! Your Zyra application has been created.\n');
-  console.log(`📁 Project: ${projectName}`);
-  console.log(`📦 Template: ${templateType}`);
-  console.log(`🏗️  Structure: ${structure}\n`);
-  console.log('Next steps:\n');
-  console.log(`  cd ${projectName}`);
-  console.log('  npm install');
-  
-  if (templateType === 'typescript') {
-    console.log('  npm run build');
-    console.log('  npm run dev    # Start development server with watch mode');
-  } else {
-    console.log('  npm run dev    # Start development server with watch mode');
-  }
-  
-  console.log('  npm start      # Start production server\n');
-  
-  if (structure === 'example') {
-    console.log('Your project includes example routes and middleware to help you get started.');
-    console.log('Check out the README.md file for more information about the project structure.\n');
-  } else {
-    console.log('Your project has a minimal setup. Start building by adding routes to your server!\n');
-  }
-  
-  console.log('Happy coding! 🚀\n');
 }
 
 /**
@@ -198,7 +168,12 @@ async function main() {
     await generator.generate();
 
     // Step 8: Display success message
-    displaySuccess(projectName, templateType, structure);
+    displaySuccess({
+      projectName,
+      templateType,
+      structure,
+      projectPath: targetPath
+    });
 
   } catch (error) {
     // Cleanup partial files on error
