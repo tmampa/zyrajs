@@ -7,6 +7,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const { handleError } = require('../dist/cli/errors');
 
 // Parse command-line arguments
 function parseArguments(args) {
@@ -94,6 +95,5 @@ async function main() {
 
 // Run the CLI
 main().catch((error) => {
-  console.error('An error occurred:', error.message);
-  process.exit(1);
+  handleError(error);
 });
