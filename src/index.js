@@ -1,4 +1,5 @@
 const App = require('./app');
+const cors = require('./middleware/cors');
 
 /**
  * Factory function to create a new application instance
@@ -15,4 +16,8 @@ function createApp(options = {}) {
   return new App(config);
 }
 
+// Export the main factory function as default
 module.exports = createApp;
+
+// Export cors middleware
+module.exports.cors = cors;
